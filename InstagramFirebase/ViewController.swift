@@ -9,13 +9,39 @@
 import UIKit
 import Firebase
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     let plusPhotoButton: UIButton = {
         let button = UIButton(type: .system)
         button.setImage(#imageLiteral(resourceName: "plus_photo").withRenderingMode(.alwaysOriginal), for: .normal)
+        button.addTarget(self, action: #selector(handlePlusPhoto), for: .touchUpInside)
         return button
     }()
+    
+    @objc func handlePlusPhoto(){
+        let imagePickerController = UIImagePickerController()
+        imagePickerController.delegate = self
+        imagePickerController.allowsEditing = true
+        present(imagePickerController, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        
+        if let editedImage = info["UIImagePickerControllerEditedImage"] as? UIImage{
+            plusPhotoButton.setImage(editedImage.withRenderingMode(.alwaysOriginal), for: .normal)
+        }
+        else if let originalImage = info["UIImagePickerControllerOriginalImage"] as? UIImage{
+            plusPhotoButton.setImage(originalImage.withRenderingMode(.alwaysOriginal), for: .normal)
+        }
+        
+        plusPhotoButton.layer.cornerRadius = plusPhotoButton.frame.width / 2
+        plusPhotoButton.layer.masksToBounds = true
+        plusPhotoButton.layer.borderColor = UIColor.darkGray.cgColor
+        plusPhotoButton.layer.borderWidth = 3
+        
+        dismiss(animated: true, completion: nil)
+        
+    }
     
     let emailTextField: UITextField = {
         let tf = UITextField()
@@ -86,9 +112,43 @@ class ViewController: UIViewController {
                 return
             }
             
-            guard let uid = user?.uid else { return }
+            guard let image = self.plusPhotoButton.imageView?.image else { return }
             
-            print("Successfully created user", uid)
+            guard let uploadData = UIImageJPEGRepresentation(image, 0.3) else { return }
+            
+            let filename = NSUUID().uuidString
+            
+            Storage.storage().reference().child("profile_images").child(filename).putData(uploadData, metadata: nil, completion: { (metadata, error) in
+                
+                if let error = error{
+                    print("Failed to upload profile image", error)
+                    return
+                }
+                
+                guard let profileImageUrl = metadata?.downloadURL()?.absoluteString else {
+                    print("Cannot getback profileImageURL from metadata.downloadURL inside handleSignUp Function..check it there")
+                    return
+                }
+                
+                print("Successfully uploaded profile image:", profileImageUrl)
+                
+                guard let uid = user?.uid else { return }
+                
+                print("Successfully created user", uid)
+                
+                let dictionaryValues = ["username": username, "profileImageUrl": profileImageUrl]
+                let values = [uid: dictionaryValues]
+                Database.database().reference().child("users").updateChildValues(values, withCompletionBlock: { (error, ref) in
+                    if let error = error{
+                        print("Failed to store userinfo", error)
+                        return
+                    }
+                    print("Successfully stored userinfo to database")
+                })
+
+                
+            })
+            
         }
     }
     
