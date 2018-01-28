@@ -20,6 +20,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Configure FirebaseAPP
         FirebaseApp.configure()
         
+        window = UIWindow()
+        window?.rootViewController = MainTabBarController()
+//        window?.rootViewController = ViewController()
+        
         return true
     }
 
