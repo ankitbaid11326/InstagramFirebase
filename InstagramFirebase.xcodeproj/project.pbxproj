@@ -17,6 +17,7 @@
 		FD58736D2018BF1600FE82AF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FD58736C2018BF1600FE82AF /* GoogleService-Info.plist */; };
 		FDD11188201E2613000F8DD5 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD11187201E2613000F8DD5 /* MainTabBarController.swift */; };
 		FDD1118A201E2A53000F8DD5 /* UserProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD11189201E2A53000F8DD5 /* UserProfileController.swift */; };
+		FDD1118D201E5191000F8DD5 /* UserProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD1118C201E5191000F8DD5 /* UserProfileHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		FD58736C2018BF1600FE82AF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FDD11187201E2613000F8DD5 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		FDD11189201E2A53000F8DD5 /* UserProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileController.swift; sourceTree = "<group>"; };
+		FDD1118C201E5191000F8DD5 /* UserProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,10 +88,10 @@
 		FD21DDD520186B3A00478FD9 /* InstagramFirebase */ = {
 			isa = PBXGroup;
 			children = (
+				FDD1118B201E5179000F8DD5 /* UserProfile */,
 				FD587369201892EC00FE82AF /* Utils */,
 				FD21DDD620186B3A00478FD9 /* AppDelegate.swift */,
 				FDD11187201E2613000F8DD5 /* MainTabBarController.swift */,
-				FDD11189201E2A53000F8DD5 /* UserProfileController.swift */,
 				FD21DDD820186B3A00478FD9 /* ViewController.swift */,
 				FD21DDDA20186B3A00478FD9 /* Main.storyboard */,
 				FD21DDDD20186B3A00478FD9 /* Assets.xcassets */,
@@ -106,6 +108,15 @@
 				FD58736A2018930500FE82AF /* Extensions.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		FDD1118B201E5179000F8DD5 /* UserProfile */ = {
+			isa = PBXGroup;
+			children = (
+				FDD1118C201E5191000F8DD5 /* UserProfileHeader.swift */,
+				FDD11189201E2A53000F8DD5 /* UserProfileController.swift */,
+			);
+			path = UserProfile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,6 +258,7 @@
 				FD21DDD920186B3A00478FD9 /* ViewController.swift in Sources */,
 				FD58736B2018930500FE82AF /* Extensions.swift in Sources */,
 				FDD11188201E2613000F8DD5 /* MainTabBarController.swift in Sources */,
+				FDD1118D201E5191000F8DD5 /* UserProfileHeader.swift in Sources */,
 				FDD1118A201E2A53000F8DD5 /* UserProfileController.swift in Sources */,
 				FD21DDD720186B3A00478FD9 /* AppDelegate.swift in Sources */,
 			);
