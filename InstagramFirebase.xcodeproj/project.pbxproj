@@ -15,6 +15,8 @@
 		FD21DDE120186B3A00478FD9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD21DDDF20186B3A00478FD9 /* LaunchScreen.storyboard */; };
 		FD58736B2018930500FE82AF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD58736A2018930500FE82AF /* Extensions.swift */; };
 		FD58736D2018BF1600FE82AF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FD58736C2018BF1600FE82AF /* GoogleService-Info.plist */; };
+		FD6A42EC2020E59B00BDF188 /*  PhotoSelectorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6A42EB2020E59B00BDF188 /*  PhotoSelectorCell.swift */; };
+		FD6A42EE2020EAB200BDF188 /* PhotoSelectorHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6A42ED2020EAB200BDF188 /* PhotoSelectorHeader.swift */; };
 		FDD11188201E2613000F8DD5 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD11187201E2613000F8DD5 /* MainTabBarController.swift */; };
 		FDD1118A201E2A53000F8DD5 /* UserProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD11189201E2A53000F8DD5 /* UserProfileController.swift */; };
 		FDD1118D201E5191000F8DD5 /* UserProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD1118C201E5191000F8DD5 /* UserProfileHeader.swift */; };
@@ -35,6 +37,8 @@
 		FD21DDE220186B3A00478FD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD58736A2018930500FE82AF /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		FD58736C2018BF1600FE82AF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FD6A42EB2020E59B00BDF188 /*  PhotoSelectorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " PhotoSelectorCell.swift"; sourceTree = "<group>"; };
+		FD6A42ED2020EAB200BDF188 /* PhotoSelectorHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSelectorHeader.swift; sourceTree = "<group>"; };
 		FDD11187201E2613000F8DD5 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		FDD11189201E2A53000F8DD5 /* UserProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileController.swift; sourceTree = "<group>"; };
 		FDD1118C201E5191000F8DD5 /* UserProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileHeader.swift; sourceTree = "<group>"; };
@@ -137,6 +141,8 @@
 			isa = PBXGroup;
 			children = (
 				FDF5CB39202070BF00DBF432 /* PhotoSelectorController.swift */,
+				FD6A42EB2020E59B00BDF188 /*  PhotoSelectorCell.swift */,
+				FD6A42ED2020EAB200BDF188 /* PhotoSelectorHeader.swift */,
 			);
 			path = AddPhoto;
 			sourceTree = "<group>";
@@ -279,11 +285,13 @@
 			files = (
 				FD21DDD920186B3A00478FD9 /* SignUpController.swift in Sources */,
 				FD58736B2018930500FE82AF /* Extensions.swift in Sources */,
+				FD6A42EC2020E59B00BDF188 /*  PhotoSelectorCell.swift in Sources */,
 				FDD11188201E2613000F8DD5 /* MainTabBarController.swift in Sources */,
 				FDD1118D201E5191000F8DD5 /* UserProfileHeader.swift in Sources */,
 				FDD1118A201E2A53000F8DD5 /* UserProfileController.swift in Sources */,
 				FD21DDD720186B3A00478FD9 /* AppDelegate.swift in Sources */,
 				FDF5CB37201F265700DBF432 /* LoginController.swift in Sources */,
+				FD6A42EE2020EAB200BDF188 /* PhotoSelectorHeader.swift in Sources */,
 				FDF5CB3A202070BF00DBF432 /* PhotoSelectorController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
