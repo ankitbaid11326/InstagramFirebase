@@ -19,6 +19,7 @@
 		FDD1118A201E2A53000F8DD5 /* UserProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD11189201E2A53000F8DD5 /* UserProfileController.swift */; };
 		FDD1118D201E5191000F8DD5 /* UserProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD1118C201E5191000F8DD5 /* UserProfileHeader.swift */; };
 		FDF5CB37201F265700DBF432 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF5CB36201F265700DBF432 /* LoginController.swift */; };
+		FDF5CB3A202070BF00DBF432 /* PhotoSelectorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF5CB39202070BF00DBF432 /* PhotoSelectorController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		FDD11189201E2A53000F8DD5 /* UserProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileController.swift; sourceTree = "<group>"; };
 		FDD1118C201E5191000F8DD5 /* UserProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileHeader.swift; sourceTree = "<group>"; };
 		FDF5CB36201F265700DBF432 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		FDF5CB39202070BF00DBF432 /* PhotoSelectorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSelectorController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 		FD21DDD520186B3A00478FD9 /* InstagramFirebase */ = {
 			isa = PBXGroup;
 			children = (
+				FDF5CB382020709F00DBF432 /* AddPhoto */,
 				FDF5CB35201F25FA00DBF432 /* Login */,
 				FDD1118B201E5179000F8DD5 /* UserProfile */,
 				FD587369201892EC00FE82AF /* Utils */,
@@ -128,6 +131,14 @@
 				FDF5CB36201F265700DBF432 /* LoginController.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		FDF5CB382020709F00DBF432 /* AddPhoto */ = {
+			isa = PBXGroup;
+			children = (
+				FDF5CB39202070BF00DBF432 /* PhotoSelectorController.swift */,
+			);
+			path = AddPhoto;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,6 +284,7 @@
 				FDD1118A201E2A53000F8DD5 /* UserProfileController.swift in Sources */,
 				FD21DDD720186B3A00478FD9 /* AppDelegate.swift in Sources */,
 				FDF5CB37201F265700DBF432 /* LoginController.swift in Sources */,
+				FDF5CB3A202070BF00DBF432 /* PhotoSelectorController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -144,6 +144,14 @@ class SignUpController: UIViewController, UIImagePickerControllerDelegate, UINav
                         print("Failed to store userinfo", error)
                         return
                     }
+                    
+                    guard let mainTabBarController = UIApplication.shared.keyWindow?.rootViewController as? MainTabBarController else {
+                        print("LoginController->handleLogin =  Cannot create instance of mainTabBarController")
+                        return
+                    }
+                    mainTabBarController.setupViewControllers()
+                    self.dismiss(animated: true, completion: nil)
+                    
                     print("Successfully stored userinfo to database")
                 })
 
