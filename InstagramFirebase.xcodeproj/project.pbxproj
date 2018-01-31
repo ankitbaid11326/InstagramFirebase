@@ -17,6 +17,7 @@
 		FD58736D2018BF1600FE82AF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FD58736C2018BF1600FE82AF /* GoogleService-Info.plist */; };
 		FD6A42EC2020E59B00BDF188 /*  PhotoSelectorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6A42EB2020E59B00BDF188 /*  PhotoSelectorCell.swift */; };
 		FD6A42EE2020EAB200BDF188 /* PhotoSelectorHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6A42ED2020EAB200BDF188 /* PhotoSelectorHeader.swift */; };
+		FD6A42F020210E2400BDF188 /* SharePhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6A42EF20210E2400BDF188 /* SharePhotoController.swift */; };
 		FDD11188201E2613000F8DD5 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD11187201E2613000F8DD5 /* MainTabBarController.swift */; };
 		FDD1118A201E2A53000F8DD5 /* UserProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD11189201E2A53000F8DD5 /* UserProfileController.swift */; };
 		FDD1118D201E5191000F8DD5 /* UserProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD1118C201E5191000F8DD5 /* UserProfileHeader.swift */; };
@@ -39,6 +40,7 @@
 		FD58736C2018BF1600FE82AF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FD6A42EB2020E59B00BDF188 /*  PhotoSelectorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " PhotoSelectorCell.swift"; sourceTree = "<group>"; };
 		FD6A42ED2020EAB200BDF188 /* PhotoSelectorHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSelectorHeader.swift; sourceTree = "<group>"; };
+		FD6A42EF20210E2400BDF188 /* SharePhotoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharePhotoController.swift; sourceTree = "<group>"; };
 		FDD11187201E2613000F8DD5 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		FDD11189201E2A53000F8DD5 /* UserProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileController.swift; sourceTree = "<group>"; };
 		FDD1118C201E5191000F8DD5 /* UserProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileHeader.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				FDF5CB39202070BF00DBF432 /* PhotoSelectorController.swift */,
 				FD6A42EB2020E59B00BDF188 /*  PhotoSelectorCell.swift */,
 				FD6A42ED2020EAB200BDF188 /* PhotoSelectorHeader.swift */,
+				FD6A42EF20210E2400BDF188 /* SharePhotoController.swift */,
 			);
 			path = AddPhoto;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD6A42F020210E2400BDF188 /* SharePhotoController.swift in Sources */,
 				FD21DDD920186B3A00478FD9 /* SignUpController.swift in Sources */,
 				FD58736B2018930500FE82AF /* Extensions.swift in Sources */,
 				FD6A42EC2020E59B00BDF188 /*  PhotoSelectorCell.swift in Sources */,
