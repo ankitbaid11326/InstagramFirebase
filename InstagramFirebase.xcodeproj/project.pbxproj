@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		E535B4DC936A1D7BF9298492 /* Pods_InstagramFirebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66A5B31070A692077B6E3769 /* Pods_InstagramFirebase.framework */; };
+		FD135444202E0E08007828E6 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD135443202E0E08007828E6 /* Post.swift */; };
+		FD135447202E1046007828E6 /* UserProfilePhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD135446202E1046007828E6 /* UserProfilePhotoCell.swift */; };
 		FD21DDD720186B3A00478FD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD21DDD620186B3A00478FD9 /* AppDelegate.swift */; };
 		FD21DDD920186B3A00478FD9 /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD21DDD820186B3A00478FD9 /* SignUpController.swift */; };
 		FD21DDDC20186B3A00478FD9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD21DDDA20186B3A00478FD9 /* Main.storyboard */; };
@@ -29,6 +31,8 @@
 		66A5B31070A692077B6E3769 /* Pods_InstagramFirebase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstagramFirebase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A6740934511257C9C3F6499 /* Pods-InstagramFirebase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramFirebase.release.xcconfig"; path = "Pods/Target Support Files/Pods-InstagramFirebase/Pods-InstagramFirebase.release.xcconfig"; sourceTree = "<group>"; };
 		CBEC73160AB9C0ED3E179CD3 /* Pods-InstagramFirebase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramFirebase.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InstagramFirebase/Pods-InstagramFirebase.debug.xcconfig"; sourceTree = "<group>"; };
+		FD135443202E0E08007828E6 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		FD135446202E1046007828E6 /* UserProfilePhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfilePhotoCell.swift; sourceTree = "<group>"; };
 		FD21DDD320186B3A00478FD9 /* InstagramFirebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramFirebase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD21DDD620186B3A00478FD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FD21DDD820186B3A00478FD9 /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
@@ -77,6 +81,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		FD135445202E0E15007828E6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FD135443202E0E08007828E6 /* Post.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		FD21DDCA20186B3A00478FD9 = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +110,7 @@
 		FD21DDD520186B3A00478FD9 /* InstagramFirebase */ = {
 			isa = PBXGroup;
 			children = (
+				FD135445202E0E15007828E6 /* Model */,
 				FDF5CB382020709F00DBF432 /* AddPhoto */,
 				FDF5CB35201F25FA00DBF432 /* Login */,
 				FDD1118B201E5179000F8DD5 /* UserProfile */,
@@ -113,6 +126,13 @@
 			path = InstagramFirebase;
 			sourceTree = "<group>";
 		};
+		FD2CB12B202E0B630065CE2F /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		FD587369201892EC00FE82AF /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +146,7 @@
 			children = (
 				FDD1118C201E5191000F8DD5 /* UserProfileHeader.swift */,
 				FDD11189201E2A53000F8DD5 /* UserProfileController.swift */,
+				FD135446202E1046007828E6 /* UserProfilePhotoCell.swift */,
 			);
 			path = UserProfile;
 			sourceTree = "<group>";
@@ -142,6 +163,7 @@
 		FDF5CB382020709F00DBF432 /* AddPhoto */ = {
 			isa = PBXGroup;
 			children = (
+				FD2CB12B202E0B630065CE2F /* New Group */,
 				FDF5CB39202070BF00DBF432 /* PhotoSelectorController.swift */,
 				FD6A42EB2020E59B00BDF188 /*  PhotoSelectorCell.swift */,
 				FD6A42ED2020EAB200BDF188 /* PhotoSelectorHeader.swift */,
@@ -289,7 +311,9 @@
 				FD6A42F020210E2400BDF188 /* SharePhotoController.swift in Sources */,
 				FD21DDD920186B3A00478FD9 /* SignUpController.swift in Sources */,
 				FD58736B2018930500FE82AF /* Extensions.swift in Sources */,
+				FD135444202E0E08007828E6 /* Post.swift in Sources */,
 				FD6A42EC2020E59B00BDF188 /*  PhotoSelectorCell.swift in Sources */,
+				FD135447202E1046007828E6 /* UserProfilePhotoCell.swift in Sources */,
 				FDD11188201E2613000F8DD5 /* MainTabBarController.swift in Sources */,
 				FDD1118D201E5191000F8DD5 /* UserProfileHeader.swift in Sources */,
 				FDD1118A201E2A53000F8DD5 /* UserProfileController.swift in Sources */,
