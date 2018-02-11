@@ -41,11 +41,14 @@ class UserProfileController: UICollectionViewController, UICollectionViewDelegat
         let ref = Database.database().reference().child("posts").child(uid)
         
         ref.queryOrdered(byChild: "creationDate").observe(.childAdded, with: { (snapshot) in
-            print(snapshot.key, snapshot.value)
             
             guard let dictionary = snapshot.value as? [String: Any] else { return }
-            let post = Post(dictionary: dictionary)
-            self.posts.append(post)
+            
+            guard let user = self.user else { return }
+            
+            let post = Post(user: user, dictionary: dictionary)
+            
+            self.posts.insert(post, at: 0)
             
             self.collectionView?.reloadData()
             
@@ -132,35 +135,14 @@ class UserProfileController: UICollectionViewController, UICollectionViewDelegat
             return
         }
         
-    Database.database().reference().child("users").child(uid).observeSingleEvent(of: .value, with: { (snapshot) in
-        
-            guard let dictionary = snapshot.value as? [String: Any] else{
-                print("UserProfileController fetchUser() cannot unwrap dictionary value")
-                return
-            }
-            self.user = User(dictionary: dictionary)
+        Database.fetchUserWithUID(uid: uid) { (user) in
+            self.user = user
             self.navigationItem.title = self.user?.username
-        
             self.collectionView?.reloadData()
-        
-        }) { (error) in
-            print("Failed to Fetch User", error)
         }
     }
 }
 
-struct User{
-    let username: String
-    let profileImageUrl: String
-    
-    init(dictionary: [String: Any]) {
-        self.username = dictionary["username"] as? String ?? ""
-        self.profileImageUrl = dictionary["profileImageUrl"] as? String ?? ""
-    }
-    
-    
-    
-}
 
 
 

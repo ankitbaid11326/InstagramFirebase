@@ -15,7 +15,31 @@ class HomePostCell: UICollectionViewCell {
             print(post?.imageURL)
             guard let postImageURL = post?.imageURL else { return }
             photoImageView.loadImage(imageUrl: postImageURL)
+            
+            userNameLabel.text = post?.user.username
+            
+            guard let profileImageURL = post?.user.profileImageUrl else { return }
+            
+            userProfileImageView.loadImage(imageUrl: profileImageURL)
+            
+            setupAttributedCaption()
         }
+    }
+    
+    fileprivate func setupAttributedCaption(){
+        
+        guard let post = self.post else { return }
+        
+        let attributedText = NSMutableAttributedString(string: post.user.username, attributes: [NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 14)])
+        
+        attributedText.append(NSAttributedString(string: " \(post.caption)", attributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 14)]))
+        
+        attributedText.append(NSAttributedString(string: "\n\n", attributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 4)]))
+        
+        attributedText.append(NSAttributedString(string: "1 week ago", attributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 14), NSAttributedStringKey.foregroundColor : UIColor.gray ]))
+        
+        captionLabel.attributedText = attributedText
+        
     }
     
     let photoImageView: CustomImageView = {
@@ -29,7 +53,6 @@ class HomePostCell: UICollectionViewCell {
         let iv = CustomImageView()
         iv.contentMode = .scaleAspectFill
         iv.clipsToBounds = true
-        iv.backgroundColor = .blue
         return iv
     }()
     
@@ -73,23 +96,12 @@ class HomePostCell: UICollectionViewCell {
     
     let captionLabel: UILabel = {
         let label = UILabel()
-        let attributedText = NSMutableAttributedString(string: "Username", attributes: [NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 14)])
-        
-        attributedText.append(NSAttributedString(string: " Some caption text that will perhaps wrap onto the next line", attributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 14)]))
-        
-        attributedText.append(NSAttributedString(string: "\n\n", attributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 4)]))
-        
-        attributedText.append(NSAttributedString(string: "1 week ago", attributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 14), NSAttributedStringKey.foregroundColor : UIColor.gray ]))
-        
-        label.attributedText = attributedText
-        label.numberOfLines = 0
+        label.numberOfLines = 0 
         return label
     }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
-//        backgroundColor = .gray
         
         addSubview(userProfileImageView)
         addSubview(userNameLabel)

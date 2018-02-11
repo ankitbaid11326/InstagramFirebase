@@ -11,9 +11,13 @@ import Foundation
 struct Post{
     
     let imageURL: String
+    let user : User
+    let caption: String
     
-    init(dictionary: [String: Any]) {
+    init(user: User, dictionary: [String: Any]) {
+        self.user = user
         self.imageURL = dictionary["imageURL"] as? String ?? ""
+        self.caption = dictionary["caption"] as? String ?? ""
     }
     
 }
